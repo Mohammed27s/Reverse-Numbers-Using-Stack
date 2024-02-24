@@ -1,0 +1,55 @@
+
+//Reverse Numbers Using stack
+
+import java.util.Scanner;
+import java.util.Stack;
+
+public class Reverse {
+
+    public static void main(String[] args){
+
+
+     Stack<Integer> nNumbers = new Stack<>();
+     Scanner in = new Scanner(System.in);
+
+     System.out.println("Enter 10 key numbers that you want to be stored in your cloud one by one : ");
+         for(Integer i = 0; i < 10; i++) {
+
+             Integer userInput = nNumbers.push(in.nextInt());
+             System.out.println("stored ... "+userInput+"\n");
+
+             if(nNumbers.size() -1 == 9){
+
+                 System.out.println("The cloud is full of your numbers "+"\n");
+             }
+
+         }
+
+         System.out.println("All numbers in your cloud : "+"\n"+nNumbers.toString()+"\n");
+
+
+         System.out.println("The reverse order of your numbers in the cloud ");
+          Integer sizeOfStack = nNumbers.size();
+
+          Stack<Integer> reverseOrder = new Stack<>();
+
+
+          for(Integer j = 10; j > 0; j--) {
+
+              reverseOrder.push(nNumbers.pop());
+
+          }
+
+
+
+          System.out.println(" "+reverseOrder.toString());
+
+
+
+
+
+
+
+
+    }
+}
